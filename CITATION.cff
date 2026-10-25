@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "Cite this workflow version AND the upstream tools/models actually used. See CITATIONS.md and NOTICE.md. Replace the collective author with verified contributors before publication."
+type: software
+title: "Mandarin and English Annotation Pipeline: an open-source tool integration workflow"
+authors:
+  - name: "Speech Annotation Pipeline contributors"
+version: 0.7.1
+date-released: 2026-10-25
+license: MIT
+abstract: "Integration and annotation-support code, developed with AI assistance; not an original speech recognition, forced-alignment or speaker model. The license applies only to project-owned material."

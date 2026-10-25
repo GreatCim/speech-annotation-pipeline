@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools==84.2.1", "wheel==0.48.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mandarin-annotation-pipeline"
+version = "0.7.1"
+description = "Mandarin and English repeated words, monologues and interviews to WAV and MFA TextGrid pairs"
+requires-python = ">=3.10,<3.13"
+dependencies = [
+  "faster-whisper==1.2.1",
+  "ctranslate2==4.7.1",
+  "numpy==2.2.6",
+  "scipy==1.15.3",
+  "huggingface-hub==0.36.2",
+  "tokenizers==0.22.2",
+  "av==17.0.0",
+  "onnxruntime==1.23.2",
+  "soundfile==0.13.1",
+  "praatio==6.2.2",
+  "opencc-python-reimplemented==0.1.7",
+  "pypinyin==0.55.0",
+  "srt==3.5.3",
+  "librosa==0.11.0",
+]
+
+[project.scripts]
+speech-annotate = "speech_pipeline.cli:main"
+
+[project.optional-dependencies]
+gui = ["PySide6-Essentials==6.8.3", "shiboken6==6.8.3"]
+
+[project.gui-scripts]
+speech-annotate-gui = "speech_pipeline.gui.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+speech_pipeline = ["data/*.json", "gui/icons/*.svg", "gui/icons/LICENSE"]
+
